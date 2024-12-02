@@ -1,6 +1,7 @@
 package br.edu.principal;
-import br.edu.multiplicacao.Multiplicacao;
 import java.util.Scanner;
+
+import br.edu.uteis.Funcao;
 
 public class Principal {
 
@@ -15,9 +16,6 @@ public class Principal {
 	        } while (num < 1 || num > 9);
 
 	    
-	        Multiplicacao.multiplicacao(num);
+	        Funcao.multi(num);
 	    }
-
-
-
 }

@@ -4,5 +4,5 @@
 /**
  * 
  */
-module EXE6 {
+module EXE06 {
 }

@@ -1,7 +1,7 @@
 package br.edu.principal;
 
 import java.util.Scanner;
-import br.edu.CalcularDuracao.*;
+import br.edu.uteis.CalcularDuracao;
 
 public class Principal {
 		    
@@ -24,8 +24,6 @@ public class Principal {
 
 		 System.out.println("A duração do jogo é: " + minutos + " minutos");
 		        
-
-		scanner.close();
 	}
 
 

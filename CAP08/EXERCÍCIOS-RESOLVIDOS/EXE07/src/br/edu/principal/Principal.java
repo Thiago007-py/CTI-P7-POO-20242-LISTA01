@@ -2,36 +2,34 @@ package br.edu.principal;
 
 import java.util.Scanner;
 
-import br.edu.CalculaMedia.CalculaMedia;
+import br.edu.uteis.calculamedia;
 
 public class Principal {
 
 	   public static void main(String[] args) {
-	        Scanner scanner = new Scanner(System.in);
+	        Scanner sc = new Scanner(System.in);
 	        
 	        double nota1, nota2, nota3, m;
-	        char letra;
+	        String letra;
 
 	        System.out.print("Digite a primeira nota: ");
-	        nota1 = scanner.nextDouble();
+	        nota1 = sc.nextDouble();
 	        System.out.print("Digite a segunda nota: ");
-	        nota2 = scanner.nextDouble();
+	        nota2 = sc.nextDouble();
 	        System.out.print("Digite a terceira nota: ");
-	        nota3 = scanner.nextDouble();
+	        nota3 = sc.nextDouble();
 
 	        do {
 	            System.out.print("Digite a letra (A para média aritmética, P para média ponderada): ");
-	            letra = scanner.next().charAt(0);
-	        } while (letra != 'A' && letra != 'P');
+	            letra = sc.next();
+	        } while (!letra.equals("A") && !letra.equals("P"));
 
-	        m = CalculaMedia.calculaMedia(nota1, nota2, nota3, letra);
+	        m = calculamedia.calculaMedia(nota1, nota2, nota3, letra);
 
-	        if (letra == 'A') {
+	        if (letra.equals("A")) {
 	            System.out.println("A média aritmética é: " + m);
 	        } else {
 	            System.out.println("A média ponderada é: " + m);
 	        }
-
-	        scanner.close();
 	    }
 	}
